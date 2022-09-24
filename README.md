@@ -1,6 +1,6 @@
 # SandBox
 
-Make sure that an AWS environement has the following and install all of the following
+Make sure that an AWS environment has the following and install all of the following
 node -v
 
 nvm -v
