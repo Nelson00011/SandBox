@@ -12,7 +12,8 @@ npm install -g c9
 
 npm install bootstrap@5.2.2
 
-
+bootstraps linked for formating (quick):
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
 Link SHH keys via this link:
 https://gist.github.com/mgordanier/9ef5a570f0710cf53261c73dbca50882
