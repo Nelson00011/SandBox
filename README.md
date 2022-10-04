@@ -10,6 +10,8 @@ npm -v
 npm install testem -g
 npm install -g c9
 
+npm install bootstrap@5.2.2
+
 
 
 Link SHH keys via this link:
