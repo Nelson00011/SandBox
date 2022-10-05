@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+    <html lang="en-US">
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="stylesheet.css">
+        <title>Halo Gelato</title>
+    </head>
+
+    <body>
+        <h1 id="title">Halo Gelato</h1>
+
+        <p id="description">A little bit of heaven in a hefty scoop. Gelato made from the best all natural ingredients. Dive into our all native sorbets. Float on a sweet cloud in our best made Affogato. Otherwise feel free to explore your indulgent side at our Bakery. </br></br>Please let us know what new Guilty Pleasure to add next:</p>
+
+
+
+
+        <!--Form element below-->
+        <form id="survey-form">
+
+            <!--Form:Fieldset one-->
+            <fieldset>
+
+                <label id="name-label">Name: <input id="name" placeholder="Please write full name. Example (John Doe)" id="name-label" type="text" required /></label>
+                <!--Form:Fieldset email needs patterning-->
+                <label id="email-label">Email Address: <input id="email" id="email-label" pattern=".+.com" placeholder="Please write email. Example (John@HaloGelato.com)" type="email" required></label>
+
+                <label id="number-label">Phone Number: <input id="number" id="number-label" type='number' placeholder="Please write phone number. Example (8885558888). " pattern="[0-9]" min="7" max="11" required></label>
+
+            </fieldset>
+            <!--Form:Fieldset two-->
+            <fieldset>
+                <!--Form:Fieldset two dropdown-->
+                <label>Chose the Most Appealing Dessert: <select id="dropdown" id="dessert" name "dessert">
+                        <option value="">(select one)</option>
+                        <option value="1">Torta Barozzi</option>
+                        <option value="2">Creamy Tiramisu Cake</option>
+                        <option value="3">Almond Coated Lemon Ricotta Cake</option>
+                    </select>
+
+                    <!--Form:Fieldset two radio-->
+                    <p id='newArea'>Which area should we spent more time enhancing?</p>
+
+
+                    <label for="baked"><input id="baked" type="radio" name="expand" value="baked" />Baked Goods
+                    </label>
+                    <label for="beverage"><input id="beverage" type="radio" name="expand" value="beverage" />Beverage Bar
+                    </label>
+                    <label for="frozen"><input id="frozen" type="radio" name="expand" value="frozen" />Frozen Delights</label>
+            </fieldset>
+
+            <!--Form:Fieldset three check boxes-->
+            <fieldset>
+                <p name='expand' , id='flavors'>Which of these flavors have you already fell into a love affair with?</p>
+
+                <label for="chocolate"><input id="flavors" id="flavor" id="chocolate" type="checkbox" value="checkbox">Triple Chocolate Gelato
+                </label>
+
+
+
+                <label for="orange"><input id="flavors" id="flavor" id="orange" type="checkbox" value="checkbox">Orange Truffle Gelato
+                </label>
+
+                <label for="lemon"><input id="flavors" id="flavor" id="lemon" type="checkbox" value="checkbox">Lemon Raspberry Gelato
+                </label>
+
+                <label for="flavors">Other flavors:
+                    <textarea id="comments" name="comments" rows="3" cols="30" placeholder="Please share additional flavors here."></textarea>
+                </label>
+
+                </label>
+            </fieldset>
+            <!--Form:submit button-->
+            <input id="submit" type="submit" value="Submit" />
+        </form>
+        <!--Form: closed-->
+        <footer>
+
+            <p id="thank-you">Thanks for helping us decide what to add to our little bit of heaven.</p>
+        </footer>
+    </body>
+
+    </html>
