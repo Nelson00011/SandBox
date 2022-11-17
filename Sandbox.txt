@@ -1,0 +1,4 @@
+Sandbox meant to be used to test: 
+-AWS cloud account
+-github CLI
+-store recent projects and development tools
