@@ -10,7 +10,6 @@ const ArticlesPage = () => {
     if (!article){
         return (<NotFoundPage />)
     }
-    
     return (
         <div>
         <h1>{article.title}</h1>
