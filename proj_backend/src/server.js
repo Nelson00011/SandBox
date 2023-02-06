@@ -1,11 +1,13 @@
 import express from 'express';
+const app = express();
+const port = 8080;
 
-const app=express();
 
-app.get('/hello', (req, res) => {
-    res.send("Hello!");
+app.get('/', (req, res) => {
+  res.send('Hello World!')
 });
 
-app.listen(8080, () => {
-    console.log('Server is listening on port 8080.');
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
 });
+
