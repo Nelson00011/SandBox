@@ -34,12 +34,12 @@ Repeat until it's second nature!
 ## Run Code (Environment)
 ### Front-End Helpful Hints (for Node.js environment)
 
-- Aim to use port: 3000
-- Initial pack.json & install dependencies:
+
+- Initial pack.json & install dependencies (port: 3000):
 ```
 > npx create-react-app <project name>
 ```
-- Test front-end once pages generated:
+- Test front-end once pages are generated:
 ```
 > npm run start
 ```
@@ -57,7 +57,7 @@ Repeat until it's second nature!
 
 - Run test with Postman as needed to test calls before connecting to client end.
 
-###Option for Linux-AWS (MongoDB Community):
+### Option for Linux-AWS (MongoDB Community):
 - Adding with Mongodb community(yum/red hat)
 ```
 > [mongodb-org-6.0]
@@ -90,7 +90,7 @@ Repeat until it's second nature!
 > npm install mongodb
 ```
 - Confirm function with MongoClient from mongodb.
-- This will later be placed in a db.js document. 
+- This will later be connected to with db.js document. 
 
 --------------------------------------------------
 
@@ -106,8 +106,8 @@ Repeat until it's second nature!
 ```
 
 
-#####################################################
-###Option for MACS-OS (MongoDB Community):
+--------------------------------------------------
+### Option for Mac-OS (MongoDB Community):
 - Install homebrew by going to the following (see resources):
  ```
 > mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
@@ -142,7 +142,7 @@ or:
 ```
 
 
-#############################################################
+--------------------------------------------------
 ## Connecting Ends
 - Install axios library to front end:
  ```
@@ -160,7 +160,7 @@ or:
 - Use axios (front-end) to corresponding server.js (back-end & CRUD):
 - 
 
-#############################################################
+--------------------------------------------------
 ### Additional Resources:
 - Hombrew Install (Mac):
 [Homebrew Alternative Install](https://docs.brew.sh/Installation#alternative-installs)
