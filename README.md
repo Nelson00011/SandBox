@@ -176,9 +176,9 @@ Troubleshooting:
 RedHat Install (linux):
 - [MongoDB Community Install](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-red-hat/)
 
-Mongdb Install / Updates:
+Mongodb Install & Updates:
 - [Mongodb Tutorial Install](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/)
 - [Mongodb Shell Commands](https://www.mongodb.com/docs/mongodb-shell/write-scripts/)
--
+
 
 
