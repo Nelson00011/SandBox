@@ -14,7 +14,7 @@ function App() {
       <div className="App">
         
         <div id="page-body">
-        <h1>My Awesome Site</h1>
+        <h1>Article FullStack Site</h1>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
@@ -29,3 +29,7 @@ function App() {
 }
 
 export default App;
+
+//axios libraries
+// const response = await axios.get('http://localhost:8080/api/articles/learn-react');
+// const data = response.data;

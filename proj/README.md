@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## REACT ARTICLES
+
+The front of this project is meant to display the articles on the client-side of the webpage.
+
 ## Available Scripts
 
 In the project directory, you can run:

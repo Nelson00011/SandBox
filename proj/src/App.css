@@ -112,3 +112,7 @@ input, textarea {
   top: 8px;
   right: 8px;
 }
+
+#upvote:hover {
+  background-color: gold;
+}
