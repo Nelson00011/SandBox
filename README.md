@@ -1,4 +1,4 @@
-#SandBox General
+# SandBox General
 
 Make sure that an AWS environment has the following and install:
 
@@ -84,8 +84,9 @@ Repeat until it's second nature!
 ```
 > mongo
 ```
-- update MongoDB database, collections.
-- install mongodb into the node backend:
+- Updated mongoDB database, collections
+- A new database will need to be generated (see resources)
+- Install mongoDB into the node backend:
 ```
 > npm install mongodb
 ```
@@ -110,9 +111,9 @@ Repeat until it's second nature!
 ### Option for Mac-OS (MongoDB Community):
 - Install homebrew by going to the following (see resources):
  ```
-> mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
+> /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-or:
+or for linux (conditional functionality - see resources):
  ```
 > git clone https://github.com/Homebrew/brew homebrew
 ```
@@ -123,6 +124,7 @@ or:
 > brew update --force --quiet
 > chmod -R go-w "$(brew --prefix)/share/zsh"
 ```
+
 - Confirm homebrew has been loaded:
 ```
 > brew --version
@@ -149,31 +151,34 @@ or:
 > npm install axios
 > npm axios --version
 ```
-- add a proxy to the package.json file (8080 AWS-linux, 8000 Mac-OS)
-- in package.json add "proxy": <localhost:id>
+- Add a proxy to the package.json file (8080 AWS-linux, 8000 Mac-OS)
+- In package.json add "proxy": <localhost:id>
 - There is also the ability to install a cors dependencies:
  ```
 > npm install cors
 > npm cors --version
 ```
-- Initiate both front & backend at the same time:
-- Use axios (front-end) to corresponding server.js (back-end & CRUD):
-- 
+- Initiate both front & backend at the same time
+- Use axios (front-end) to corresponding server.js (back-end & CRUD)
 
 --------------------------------------------------
 ### Additional Resources:
-- Hombrew Install (Mac):
-[Homebrew Alternative Install](https://docs.brew.sh/Installation#alternative-installs)
-[Homebrew Trouble Shooting](https://docs.brew.sh/Troubleshooting)
+Hombrew Install (Mac):
+- [Homebrew Alternative Install](https://docs.brew.sh/Installation#alternative-installs)
+- [Homebrew Trouble Shooting](https://docs.brew.sh/Troubleshooting)
+
 Troubleshooting:
 ```
 > brew config
 > brew doctor
 ```
 
-- RedHat Install (linux):
-[MongoDB Community Install](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-red-hat/)
+RedHat Install (linux):
+- [MongoDB Community Install](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-red-hat/)
 
-- Mongdb Install:
-[Mongodb Tutorial Install](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/)
+Mongdb Install / Updates:
+- [Mongodb Tutorial Install](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/)
+- [Mongodb Shell Commands](https://www.mongodb.com/docs/mongodb-shell/write-scripts/)
+-
+
 
