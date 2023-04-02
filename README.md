@@ -35,14 +35,50 @@ Repeat until it's second nature!
 ### Front-End Helpful Hints (for Node.js environment)
 
 
-- Initial pack.json & install dependencies (port: 3000):
+- Initial package.json & install dependencies (localhost: 3000):
 ```
 > npx create-react-app <project name>
+> cd <project name>
+> npm install --save react-router-dom
 ```
-- Test front-end once pages are generated:
+- Test front-end once pages are generated (ctrl-c to exit):
 ```
 > npm run start
 ```
+
+
+- Establish Firebase (see resources):
+```
+> npm install firebase
+```
+> Required for **index.js**
+```
+import { initializeApp } from 'firebase/app';
+```
+- include the remainder of the info provided by Firebase (see resources)
+- Add LoginPage.js & CreateAccountPage.js to pages section
+> Required for **LoginPage.js**
+```
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+```
+- Above depends on type of firebase
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ### Back-End Helpful Hints (for Node.js environment)
@@ -113,17 +149,7 @@ Repeat until it's second nature!
  ```
 > /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-or for linux (conditional functionality - see resources):
- ```
-> git clone https://github.com/Homebrew/brew homebrew
-```
-- The following may take several minutes to complete
 
- ```
-> eval "$(homebrew/bin/brew shellenv)"
-> brew update --force --quiet
-> chmod -R go-w "$(brew --prefix)/share/zsh"
-```
 
 - Confirm homebrew has been loaded:
 ```
@@ -161,6 +187,8 @@ or for linux (conditional functionality - see resources):
 - Initiate both front & backend at the same time
 - Use axios (front-end) to corresponding server.js (back-end & CRUD)
 
+
+
 --------------------------------------------------
 ### Additional Resources:
 Hombrew Install (Mac):
@@ -180,5 +208,7 @@ Mongodb Install & Updates:
 - [Mongodb Tutorial Install](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/)
 - [Mongodb Shell Commands](https://www.mongodb.com/docs/mongodb-shell/write-scripts/)
 
+FireBase Install & Other:
+- [FireBase](https://firebase.google.com/)
 
 

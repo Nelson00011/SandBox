@@ -2,7 +2,7 @@ import express from 'express';
 import { db, connectToDb } from './db.js';
 
 //app components:
-const port = 8080;
+const port = 8000;
 const app = express();
 app.use(express.json());
 
@@ -22,7 +22,8 @@ app.get('/api/articles/:name', async (req, res) => {
 
 app.put('/api/articles/:name/upvote', async (req, res) => {
     const { name } = req.params;
-   
+  console.log("SERVER.JS - BEFORE DATABASE")
+  console.log(name)
     await db.collection('articles').updateOne({ name }, {
         $inc: { upvotes: 1 },
     });
@@ -57,6 +58,6 @@ connectToDb(() => {
     app.listen(port, () => {
         console.log(`Server is listening on port ${port}`);
     });
-})
+});
 
 
