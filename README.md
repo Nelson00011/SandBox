@@ -34,7 +34,6 @@ Repeat until it's second nature!
 ## Run Code (Environment)
 ### Front-End Helpful Hints (for Node.js environment)
 
-
 - Initial package.json & install dependencies (localhost: 3000):
 ```
 > npx create-react-app <project name>
@@ -46,8 +45,7 @@ Repeat until it's second nature!
 > npm run start
 ```
 
-
-- Establish Firebase (see resources):
+- Establish Firebase email/password only (see resources):
 ```
 > npm install firebase
 ```
@@ -55,37 +53,28 @@ Repeat until it's second nature!
 ```
 import { initializeApp } from 'firebase/app';
 ```
-- include the remainder of the info provided by Firebase (see resources)
+- Include the remainder of the info provided by Firebase (see resources):
 - Add LoginPage.js & CreateAccountPage.js to pages section
 > Required for **LoginPage.js**
 ```
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 ```
-- Above depends on type of firebase
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- Required for **CreateAccountPage.js**
+```
+import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+```
+- Required for **NavBar.js**
+```
+import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+```
+- Sign Out Button uses onClick of signOut(getAuth())
 
 
 ### Back-End Helpful Hints (for Node.js environment)
 
 - Install express:
 ```
-> npm install express
+> npm install express --save
 > npm express -v
 > npm list express
 ```
@@ -93,7 +82,8 @@ import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 
 - Run test with Postman as needed to test calls before connecting to client end.
 
-### Option for Linux-AWS (MongoDB Community):
+
+#### Option for Linux-AWS (MongoDB Community):
 - Adding with Mongodb community(yum/red hat)
 ```
 > [mongodb-org-6.0]
@@ -129,8 +119,16 @@ import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 - Confirm function with MongoClient from mongodb.
 - This will later be connected to with db.js document. 
 
+- Establish Firebase email/password only (see resources):
+```
+> npm install firebase-admin
+```
+- Include the remainder of Firebase Credentials in .gitignore (see resources):
+> Required for **server.js**
+```
+import admin from 'firebase-admin';
+```
 --------------------------------------------------
-
 - Test dev environment:
 ```
 > npm install -g nodeman
@@ -142,14 +140,12 @@ import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 > npm run dev
 ```
 
-
 --------------------------------------------------
-### Option for Mac-OS (MongoDB Community):
+#### Option for Mac-OS (MongoDB Community):
 - Install homebrew by going to the following (see resources):
  ```
 > /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-
 
 - Confirm homebrew has been loaded:
 ```
@@ -169,7 +165,6 @@ import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 > brew services start mongodb-community@6.0
 ```
 
-
 --------------------------------------------------
 ## Connecting Ends
 - Install axios library to front end:
@@ -186,7 +181,6 @@ import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 ```
 - Initiate both front & backend at the same time
 - Use axios (front-end) to corresponding server.js (back-end & CRUD)
-
 
 
 --------------------------------------------------
@@ -207,8 +201,12 @@ RedHat Install (linux):
 Mongodb Install & Updates:
 - [Mongodb Tutorial Install](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/)
 - [Mongodb Shell Commands](https://www.mongodb.com/docs/mongodb-shell/write-scripts/)
+- Required for hosting:
+- [Mongodb Atlas](https://www.mongodb.com/cloud/atlas/lp/try4?utm_source=google&utm_campaign=search_gs_pl_evergreen_atlas_core-high-int_prosp-brand_gic-null_amers-us_ps-all_desktop_eng_lead&utm_term=mongodb%20atlas&utm_medium=cpc_paid_search&utm_ad=e&utm_ad_campaign_id=19609124046&adgroup=145188748043&cq_cmp=19609124046&gclid=Cj0KCQjw8qmhBhClARIsANAtbocDXobxFk95Q5HpKjPtaxrg8FNuapiNK1F6DwmYD5O8NvGneej7BMcaAkXwEALw_wcB)
 
-FireBase Install & Other:
+Firebase Install Info:
 - [FireBase](https://firebase.google.com/)
+- [Register Firebbase to Javascript](https://firebase.google.com/docs/web/setup#available-libraries)
 
-
+Google Cloud: 
+- (Google Cloud)[https://cloud.google.com/gcp?utm_source=google&utm_medium=cpc&utm_campaign=na-US-all-en-dr-bkws-all-all-trial-e-dr-1605212&utm_content=text-ad-none-any-DEV_c-CRE_491349594127-ADGP_Desk+%7C+BKWS+-+EXA+%7C+Txt+_+Google+Cloud+Platform+Core-KWID_43700064423315751-kwd-26415313501&utm_term=KW_google+cloud+platform-ST_google+cloud+platform&gclid=Cj0KCQjw8qmhBhClARIsANAtbof7b4_CmjW0sZNrwownOc0F549oicHMWMME5Mgf6sFfhexTRY-EG_EaAtLXEALw_wcB&gclsrc=aw.ds&hl=en]

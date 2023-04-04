@@ -34,8 +34,9 @@ const LoginPage = () => {
         value={password}
         onChange={(event)=> setPassword(event.target.value)}/>
         
-        <button onClick={logIn}>Log In</button>
-        <Link to="/create-account">Create Account</Link>
+        <button onClick={logIn} style={{marginLeft:100}}>Log In</button>
+        <br/>
+        <Link to="/create-account" style={{marginLeft: 75}}>Create Account</Link>
         </div>
         );
 }

@@ -6,8 +6,8 @@ import AboutPage from './pages/AboutPage';
 import ArticlesListPage from './pages/ArticlesListPage';
 import ArticlePage from './pages/ArticlePage';
 import NotFoundPage from './pages/NotFoundPage';
-import LoginPage from './pages/LoginPage.js';
-import CreateAccountPage from './pages/CreateAccountPage.js';
+import LoginPage from './pages/LoginPage';
+import CreateAccountPage from './pages/CreateAccountPage';
 
 
 function App() {
@@ -17,14 +17,14 @@ function App() {
       <div className="App">
         
         <div id="page-body">
-        <h1>Article FullStack Site</h1>
+        <h1>Article MERN FullStack Site</h1>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/articles" element={<ArticlesListPage />} />
             <Route path="/articles/:articleId" element={<ArticlePage />} />
             <Route path="/login" element={<LoginPage />} />
-            <Route path="/create-acount" element={<CreateAccountPage />} />
+            <Route path="/create-account" element={<CreateAccountPage />} />
             <Route path="*" element={<NotFoundPage/>} />
           </Routes>
         </div>

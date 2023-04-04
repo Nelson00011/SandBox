@@ -2,66 +2,68 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import NotFoundPage from './NotFoundPage';
-import articles from './article-content';
-import CommentsList from '../components/CommentsList.js';
+import CommentsList from '../components/CommentsList';
 import AddCommentForm from '../components/AddCommentForm';
 import useUser from '../hooks/useUser';
+import articles from './article-content'; 
 
 
-const ArticlesPage = () => {
-    const [articleInfo, setArticleInfo] = useState ({ upvotes: 0, comments: []});
+
+const ArticlePage = () => {
+    const [articleInfo, setArticleInfo] = useState({ upvotes: 0, comments: [], canUpvote: false });
+    const { canUpvote } = articleInfo; 
     const { articleId } = useParams();
-    
+
     const { user, isLoading } = useUser();
-       
-    useEffect( ()=> {
-         const loadArticleInfo = async () => {
-             const response = await axios.get(`http://localhost:3000/api/articles/${articleId}`);
-             const articleInfo = response.data() || {};
-             setArticleInfo(articleInfo);
-         }
-         
-        loadArticleInfo();
-        
-    }, []);
-    
-    
-    const article = articles.find((c)=> c.name === articleId)
+
+    useEffect(() => {
+        const loadArticleInfo = async () => {
+            const token = user && await user.getIdToken();
+            const headers = token ? { authtoken: token } : {};
+            const response = await axios.get(`/api/articles/${articleId}`, { headers });
+            const newArticleInfo = response.data;
+            setArticleInfo(newArticleInfo);
+        }
+        if(isLoading){
+            loadArticleInfo();
+        }
+    }, [isLoading, user]);
+
+    const article = articles.find(article => article.name === articleId);
+
     const addUpvote = async () => {
-        console.log('TESTINGHERE-ID')
-        console.log(articleId)
-        const response = await axios.put(`/api/articles/${articleId}/upvote`);
+        const token = user && await user.getIdToken();
+        const headers = token ? { authtoken: token } : {};
+        const response = await axios.put(`/api/articles/${articleId}/upvote`, null, { headers });
         const updatedArticle = response.data;
         setArticleInfo(updatedArticle);
-        console.log('TESTING-response')
-        console.log(response)
     }
-    
-    
-    if (!article){
-        return (<NotFoundPage />)
+
+    if (!article) {
+        return <NotFoundPage />
     }
+
+
     return (
-        <div>
+        <>
         <h1>{article.title}</h1>
         <div className="upvotes-section">
-        {user
-                ? <button onClick={ addUpvote }>Vote</button>
-                : <button>Log in to Vote</button>}
-                
-            <p id="upvote">This article has { articleInfo.upvotes } votes</p>
+            {user
+                ? <button onClick={addUpvote}>{ canUpvote ? "Vote" : "Already Voted" }</button>
+                : <button to="/login">Log in to Vote</button>}
+            <p>This article has {articleInfo.upvotes} vote(s)</p>
         </div>
-        {article.content.map((para, index) => (<p key={index}>{para}</p>))}
+        {article.content.map((paragraph, i) => (
+            <p key={i}>{paragraph}</p>
+        ))}
         {user
             ? <AddCommentForm
                 articleName={articleId}
                 onArticleUpdated={updatedArticle => setArticleInfo(updatedArticle)} />
             : <button>Log in to add a comment</button>}
-            
         <CommentsList comments={articleInfo.comments} />
-        </div>
-        );
+        </>
+    );
 }
 
-
-export default ArticlesPage;
+export default ArticlePage;
