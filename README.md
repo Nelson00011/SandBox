@@ -59,13 +59,13 @@ import { initializeApp } from 'firebase/app';
 ```
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 ```
-- Required for **CreateAccountPage.js**
+> Required for **CreateAccountPage.js**
 ```
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 ```
-- Required for **NavBar.js**
+> Required for **NavBar.js**
 ```
-import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+import { getAuth, signOut } from 'firebase/auth';
 ```
 - Sign Out Button uses onClick of signOut(getAuth())
 
@@ -119,6 +119,7 @@ import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 - Confirm function with MongoClient from mongodb.
 - This will later be connected to with db.js document. 
 
+#### Firebase
 - Establish Firebase email/password only (see resources):
 ```
 > npm install firebase-admin
@@ -201,7 +202,7 @@ RedHat Install (linux):
 Mongodb Install & Updates:
 - [Mongodb Tutorial Install](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/)
 - [Mongodb Shell Commands](https://www.mongodb.com/docs/mongodb-shell/write-scripts/)
-- Required for hosting:
+> Required for hosting:
 - [Mongodb Atlas](https://www.mongodb.com/cloud/atlas/lp/try4?utm_source=google&utm_campaign=search_gs_pl_evergreen_atlas_core-high-int_prosp-brand_gic-null_amers-us_ps-all_desktop_eng_lead&utm_term=mongodb%20atlas&utm_medium=cpc_paid_search&utm_ad=e&utm_ad_campaign_id=19609124046&adgroup=145188748043&cq_cmp=19609124046&gclid=Cj0KCQjw8qmhBhClARIsANAtbocDXobxFk95Q5HpKjPtaxrg8FNuapiNK1F6DwmYD5O8NvGneej7BMcaAkXwEALw_wcB)
 
 Firebase Install Info:
@@ -209,4 +210,4 @@ Firebase Install Info:
 - [Register Firebbase to Javascript](https://firebase.google.com/docs/web/setup#available-libraries)
 
 Google Cloud: 
-- (Google Cloud)[https://cloud.google.com/gcp?utm_source=google&utm_medium=cpc&utm_campaign=na-US-all-en-dr-bkws-all-all-trial-e-dr-1605212&utm_content=text-ad-none-any-DEV_c-CRE_491349594127-ADGP_Desk+%7C+BKWS+-+EXA+%7C+Txt+_+Google+Cloud+Platform+Core-KWID_43700064423315751-kwd-26415313501&utm_term=KW_google+cloud+platform-ST_google+cloud+platform&gclid=Cj0KCQjw8qmhBhClARIsANAtbof7b4_CmjW0sZNrwownOc0F549oicHMWMME5Mgf6sFfhexTRY-EG_EaAtLXEALw_wcB&gclsrc=aw.ds&hl=en]
+- [Google Cloud](https://cloud.google.com/gcp?utm_source=google&utm_medium=cpc&utm_campaign=na-US-all-en-dr-bkws-all-all-trial-e-dr-1605212&utm_content=text-ad-none-any-DEV_c-CRE_491349594127-ADGP_Desk+%7C+BKWS+-+EXA+%7C+Txt+_+Google+Cloud+Platform+Core-KWID_43700064423315751-kwd-26415313501&utm_term=KW_google+cloud+platform-ST_google+cloud+platform&gclid=Cj0KCQjw8qmhBhClARIsANAtbof7b4_CmjW0sZNrwownOc0F549oicHMWMME5Mgf6sFfhexTRY-EG_EaAtLXEALw_wcB&gclsrc=aw.ds&hl=en)
